@@ -1,0 +1,99 @@
+:root {
+  --purple-600: hsl(246, 80%, 60%);
+
+  --orange-300: hsl(15, 100%, 70%);
+  --blue-300: hsl(195, 74%, 62%);
+  --pink-400: hsl(348, 100%, 68%);
+  --green-400: hsl(145, 58%, 55%);
+  --purple-700: hsl(264, 64%, 52%);
+  --yellow-300: hsl(43, 84%, 65%);
+  --color-white: hsl(0, 0%, 100%);
+  --navy-950: hsl(226, 43%, 10%);
+  --navy-900: hsl(235, 46%, 20%);
+  --purple-500: hsl(235, 45%, 61%);
+  --navy-200: hsl(236, 100%, 87%);
+
+  --font-family: "Rubik", sans-serif;
+  --font-size-body: 1.125rem;
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+}
+
+body {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  background-color: var(--navy-950);
+  font-family: var(--font-family);
+}
+
+main {
+  max-width: 69.75rem;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+
+  .report {
+    background-color: var(--navy-900);
+    border-radius: 0.9375rem;
+
+    .info {
+      display: flex;
+      gap: 1.5rem;
+      padding: 2rem;
+      background-color: var(--purple-600);
+      border-radius: 0.9375rem;
+
+      .image {
+        display: grid;
+        place-items: center;
+        width: 4rem;
+        height: 4rem;
+        border-radius: 50%;
+        border: 3px solid var(--color-white);
+        flex-shrink: 0;
+      }
+
+      .content {
+        p {
+          font-size: 1.125rem;
+          font-weight: var(--font-weight-regular);
+          line-height: 1.5;
+          letter-spacing: 0;
+          color: var(--navy-200);
+        }
+
+        h1 {
+          font-size: 1.5rem;
+          font-weight: var(--font-weight-light);
+          line-height: 1.75;
+          letter-spacing: 0;
+          color: var(--color-white);
+        }
+
+      }
+    }
+
+    .filters {
+      padding-block: 1.5rem;
+      display: flex;
+      justify-content: space-around;
+
+      button {
+        background: transparent;
+        border: none;
+        font-size: 1.125rem;
+        font-weight: var(--font-weight-regular);
+        line-height: 1.5;
+        letter-spacing: 0;
+        color: var(--purple-500);
+
+      }
+
+      button[aria-pressed="true"] {
+        color: var(--color-white);
+      }
+    }
+  }
+}
