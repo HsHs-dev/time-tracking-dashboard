@@ -24,6 +24,8 @@ body {
   min-height: 100dvh;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   padding: 1rem;
   background-color: var(--navy-950);
   font-family: var(--font-family);
@@ -114,6 +116,7 @@ main {
         background-color: var(--navy-900);
         border-radius: 0.9375rem;
 
+
         .header {
           display: flex;
           justify-content: space-between;
@@ -192,5 +195,119 @@ main {
     }
 
 
+  }
+}
+
+@media (min-width: 40rem) {
+
+  main .stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 1.5rem 1.5rem;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "work play study"
+      "exercise social self-care";
+  }
+
+  .work {
+    grid-area: work;
+  }
+
+  .play {
+    grid-area: play;
+  }
+
+  .study {
+    grid-area: study;
+  }
+
+  .exercise {
+    grid-area: exercise;
+  }
+
+  .social {
+    grid-area: social;
+  }
+
+  .self-care {
+    grid-area: self-care;
+  }
+
+  main {
+    .stats {
+      article {
+
+        .content {
+          .stat {
+            flex-direction: column;
+            align-items: start;
+            gap: 0.5rem;
+            margin-top: 1rem;
+
+            .current {
+              font-size: 3.5rem;
+              font-weight: var(--font-weight-light);
+              line-height: 1.2;
+              letter-spacing: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+}
+
+@media (min-width: 60rem) {
+  main {
+    display: flex;
+    gap: 2rem;
+
+    .report {
+
+      .info {
+        flex-direction: column;
+        padding-right: 5.125rem;
+        padding-bottom: 5.75rem;
+        gap: 2.5rem;
+
+        .image {
+          width: 4.875rem;
+          height: 4.875rem;
+        }
+
+        .content {
+          h1 {
+            font-size: 2.5rem;
+            font-weight: var(--font-weight-light);
+            line-height: 1.2;
+            letter-spacing: 0;
+
+            span {
+              display: block;
+            }
+          }
+        }
+      }
+
+      .filters {
+        flex-direction: column;
+        align-items: start;
+        padding-left: 2rem;
+        gap: 1.3125rem;
+      }
+    }
+
+    .stats {
+      margin-top: 0;
+
+      article {
+        .content {
+          padding: 3rem;
+        }
+      }
+    }
   }
 }
