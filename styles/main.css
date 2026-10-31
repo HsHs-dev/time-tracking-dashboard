@@ -96,4 +96,101 @@ main {
       }
     }
   }
+
+  .stats {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+
+
+    article {
+      color: white;
+      border-radius: 0.9375rem;
+      padding-top: 2.375rem;
+
+      .content {
+        padding: 1.5rem;
+        background-color: var(--navy-900);
+        border-radius: 0.9375rem;
+
+        .header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          h2 {
+            font-size: 1.125rem;
+            font-weight: var(--font-weight-medium);
+            line-height: 1.5;
+            letter-spacing: 0;
+          }
+        }
+
+        .stat {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-top: 0.5rem;
+
+          .current {
+            font-size: 2rem;
+            font-weight: var(--font-weight-light);
+            line-height: 1.2;
+            letter-spacing: 0;
+          }
+
+          .previous {
+            color: var(--navy-200);
+            font-size: 0.9375rem;
+            font-weight: var(--font-weight-regular);
+            line-height: 1.2;
+            letter-spacing: 0;
+          }
+        }
+      }
+    }
+
+    .work,
+    .play,
+    .study,
+    .exercise,
+    .social,
+    .self-care {
+      background-position: top -10% right 10%;
+      background-repeat: no-repeat;
+    }
+
+    .work {
+      background-color: var(--orange-300);
+      background-image: url("../images/icon-work.svg");
+    }
+
+    .play {
+      background-color: var(--blue-300);
+      background-image: url("../images/icon-play.svg");
+    }
+
+    .study {
+      background-color: var(--pink-400);
+      background-image: url("../images/icon-study.svg");
+    }
+
+    .exercise {
+      background-color: var(--green-400);
+      background-image: url("../images/icon-exercise.svg");
+    }
+
+    .social {
+      background-color: var(--purple-700);
+      background-image: url("../images/icon-social.svg");
+    }
+
+    .self-care {
+      background-color: var(--yellow-300);
+      background-image: url("../images/icon-self-care.svg");
+    }
+
+
+  }
 }
