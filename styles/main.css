@@ -96,6 +96,7 @@ main {
 
       button[aria-pressed="true"] {
         color: var(--color-white);
+        text-decoration: underline;
       }
 
       button:hover {
@@ -251,9 +252,6 @@ main {
   main {
     .stats {
       article {
-
-        width: 13rem;
-        height: 13.3125rem;
 
         .content {
           .stat {
