@@ -208,7 +208,7 @@ main {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    gap: 0.5rem 1.5rem;
+    gap: 1.5rem 1.5rem;
     grid-auto-flow: row;
     grid-template-areas:
       "work play study"
@@ -242,6 +242,10 @@ main {
   main {
     .stats {
       article {
+
+        width: 13rem;
+        height: 13.3125rem;
+
         .content {
           .stat {
             flex-direction: column;
