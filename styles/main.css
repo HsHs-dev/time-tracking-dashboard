@@ -107,7 +107,7 @@ main {
 
 
     article {
-      color: white;
+      color: var(--color-white);
       border-radius: 0.9375rem;
       padding-top: 2.375rem;
 
@@ -320,4 +320,11 @@ main {
       }
     }
   }
+}
+
+.error-message {
+  color: var(--color-white);
+  font-size: 1rem;
+  text-align: center;
+  padding: 2rem;
 }

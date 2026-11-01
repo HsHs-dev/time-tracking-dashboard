@@ -73,11 +73,25 @@ function updateStats() {
 }
 
 
-fetch("./data.json").then(res => {
-  if (!res.ok) return console.log("Oops, something went wrong")
-  return res.json()
-}).then(data => {
-  activities = data
-  generateCards(activities)
-  updateStats()
-})
+fetch("./data.json")
+  .then(res => {
+    if (!res.ok) {
+      throw new Error(`HTTP error: ${res.status}`);
+    }
+
+    return res.json();
+  })
+  .then(data => {
+    activities = data;
+    generateCards(activities);
+    updateStats();
+  })
+  .catch(error => {
+    console.error("Failed to load dashboard:", error);
+
+    stats.innerHTML = `
+  <p class="error-message">
+    Unable to load your activity data. Please try again.
+  </p>
+`;
+  });
