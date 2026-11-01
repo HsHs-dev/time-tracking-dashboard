@@ -91,9 +91,18 @@ main {
         letter-spacing: 0;
         color: var(--purple-500);
         cursor: pointer;
+        transition: color 0.1s ease-in-out;
       }
 
       button[aria-pressed="true"] {
+        color: var(--color-white);
+      }
+
+      button:hover {
+        color: var(--navy-800);
+      }
+
+      button:hover[aria-pressed="true"] {
         color: var(--color-white);
       }
     }
